@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    #d2f3d7,
+    #b7eed8,
+    #9be8dd,
+    #7fe0e7,
+    #69d7f2
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-container {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  box-shadow: 0 20px 15px 0 rgba(151, 245, 250, 1);
+  padding: 20px 20px;
+  margin: 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.image-container {
+  position: relative;
+  width: 110px;
+}
+
+/* .image-container::after {
+  content: "";
+  background-color: #fff;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 41%;
+  bottom: 70%;
+  border-radius: 50%;
+} */
+
+.image-container img {
+  width: inherit;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: rotate 3s linear infinite;
+
+  animation-play-state: paused;
+}
+
+.music-container.play .image-container img {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.btn-action {
+  background-color: #fff;
+  border: 0;
+  color: #dfdbdf;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.btn-action-big {
+  font-size: 30px;
+  color: #cdc2d0;
+}
+
+.music-infomation {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 150px;
+  opacity: 0;
+  z-index: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-container.play .music-infomation {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.timeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.currentTime,
+.duration {
+  font-size: 12px;
+}
+
+.progress-container {
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
