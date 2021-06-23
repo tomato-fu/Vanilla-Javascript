@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+}
+
+.section-container > select {
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 10px;
+}
+
+.section-container {
+  margin-bottom: 30px;
+}
+
+.showcase {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  color: #777;
+  padding: 5px;
+}
+
+.showcase li {
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.seat {
+  height: 12px;
+  width: 15px;
+  background-color: #444451;
+  margin-right: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 18px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+  cursor: initial;
+}
+
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgb(255 255 255 /70%);
+}
+
+.screen-container {
+  perspective: 1000px;
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.screen-container .seat:not(.occupied):hover {
+  transform: scale(1.2);
+}
+
+.screen {
+  cursor: default;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.row .seat:focus {
+  height: 20px;
+  width: 23px;
+}
+#count,
+#total {
+  color: #6feaf6;
+}
