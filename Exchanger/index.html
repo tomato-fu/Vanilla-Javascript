@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="img/money.png" alt="money-img" />
+    <h1>Exchange Rate Calculator</h1>
+    <p>Choose the currency and amounts to get the exchange rate</p>
+    <div class="container">
+      <div class="currency">
+        <input list="browsers" id="currencyOne" />
+        <datalist id="browsers"> </datalist>
+
+        <input type="number" id="numberOne" placeholder="0" value="1" />
+      </div>
+
+      <div class="detail">
+        <button id="swap">Swap</button>
+        <h4 id="rate">1 USD = 6.47 CNY</h4>
+      </div>
+
+      <div class="currency">
+        <input list="browsers" id="currencyTwo" />
+        <datalist id="browsers"> </datalist>
+        <input type="number" id="numberTwo" placeholder="0" />
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

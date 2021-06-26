@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+img {
+  width: 150px;
+}
+
+.currency {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.currency input {
+  padding: 10px 20px 10px 10px;
+  border: 1px solid #dedede;
+  font-size: 20px;
+  background: transparent;
+}
+#currencyOne {
+  margin-right: 50px;
+}
+#currencyTwo {
+  margin-right: 50px;
+}
+
+.detail button {
+  color: #fff;
+  border: 1px solid #777;
+  background-color: #5fbaa7;
+  border-radius: 5px;
+  padding: 5px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.detail h4 {
+  color: #5fbaa7;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+h1 {
+  color: #5fbaa7;
+}
