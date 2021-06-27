@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="logo">
+        <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" />
+      </div>
+      <ul>
+        <li>
+          <button class="nav-button">
+            <a href="#">Home</a>
+          </button>
+        </li>
+        <li>
+          <button class="nav-button">
+            <a href="#">Portfolio</a>
+          </button>
+        </li>
+        <li>
+          <button class="nav-button">
+            <a href="#">Blog</a>
+          </button>
+        </li>
+        <li>
+          <button class="nav-button">
+            <a href="#">Contact Me</a>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <button id="toggle" class="toggle">
+        <i class="fa fa-bars fa-2x"></i>
+      </button>
+
+      <h1>My Landing Page</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectreture adipicsicng elit tenetur amet!
+      </p>
+
+      <button id="signup" class="signup">Sign Up</button>
+    </header>
+
+    <main class="container">
+      <h2>What is this landing page about?</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure
+        accusamus ab consectetur eos provident ipsa est perferendis architecto.
+        Provident, quaerat asperiores. Quo esse minus repellat sapiente, impedit
+        obcaecati necessitatibus.
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio
+        officia ipsa. Cum dignissimos possimus et non provident facilis saepe!
+      </p>
+
+      <h2>Tell Me More</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eaque
+        delectus explicabo qui reprehenderit? Aspernatur ad similique minima
+        accusamus maiores accusantium libero autem iusto reiciendis ullam
+        impedit esse quibusdam, deleniti laudantium rerum beatae, deserunt nemo
+        neque, obcaecati exercitationem sit. Earum.
+      </p>
+    </main>
+
+    <div class="modal-container" id="modal-container">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">Sign up</div>
+
+        <p>Register with us to get offers, support and more</p>
+        <div class="modal-content">
+          <form action="" method="POST" id="form" novalidate>
+            <div class="form-section">
+              <label for="username">Username</label>
+              <input type="text" placeholder="Enter username" id="username" />
+              <small>Error</small>
+            </div>
+
+            <div class="form-section">
+              <label for="email">Email</label>
+              <input type="email" placeholder="Enter Enter email" id="email" />
+              <small>Error</small>
+            </div>
+
+            <div class="form-section">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="Enter password"
+                id="password"
+              />
+              <small>Error</small>
+            </div>
+
+            <div class="form-section">
+              <label for="password_confirm">Confirm Password</label>
+              <input
+                type="password"
+                placeholder="Enter password again"
+                id="password_confirm"
+              />
+              <small>Error</small>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
