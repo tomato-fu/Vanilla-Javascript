@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    #d2f3d7,
+    #b7eed8,
+    #9be8dd,
+    #7fe0e7,
+    #69d7f2
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  padding: 20px 30px;
+  height: 350px;
+  width: 450px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+.wrong-word-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  flex-direction: column;
+  display: flex;
+  text-align: right;
+}
+
+.wrong-words span {
+  font-size: 24px;
+}
+
+.word {
+  position: absolute;
+  display: flex;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  display: inline-flex;
+  height: 50px;
+  width: 20px;
+  border-bottom: 3px solid #111;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #2980b9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 /30%);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.modal h1 {
+  color: #fff;
+}
+
+.confirm-btn {
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #2980b9;
+  cursor: pointer;
+  border: 0;
+  font-size: 16px;
+}
+
+.confirm-btn:hover {
+  background-color: #111;
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 0 0;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: -50px;
+  transition: transform 0.3s ease-in-out;
+  color: #fff;
+}
+
+.notification-container.show {
+  transform: translateY(-50px);
+}
