@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 350px;
+  margin: 30px auto;
+}
+
+.container h1 {
+  margin-bottom: 30px;
+}
+
+.inc-exp-container {
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.income {
+  flex: 1;
+  border-right: 1px solid #dedede;
+}
+
+.income > h4 {
+  margin-bottom: 5px;
+}
+
+.expense {
+  flex: 1;
+}
+
+.expense > h4 {
+  margin-bottom: 5px;
+}
+
+#income {
+  color: #2ecc71;
+}
+
+#expense {
+  color: #c0392b;
+}
+
+.form-container h2 {
+  padding: 10px 0px;
+  border-bottom: 1px solid #dedede;
+}
+
+.detail {
+  position: relative;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.delete-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+  transform: translate(-100%, 45%);
+  color: #fff;
+  background-color: #e74c3c;
+  border: 0;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.detail:hover .delete-btn {
+  opacity: 1;
+}
+
+.detail.green {
+  border-right: 5px solid #2ecc71;
+}
+
+.detail.red {
+  border-right: 5px solid #c0392b;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+.form-container label {
+  display: block;
+  padding: 10px 0;
+}
+
+.form-container input {
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+#submit-btn {
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #9c88ff;
+  border: 0;
+  color: #fff;
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 2px;
+  font-size: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-bottom: 1px solid #dedede;
+}
+
+.clear-btn {
+  cursor: pointer;
+  padding: 6px 10px;
+  background-color: #c0392b;
+  border: 0;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
