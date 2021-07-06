@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="settings">
+      <form id="setting-form">
+        <label for="level">Levels</label>
+        <select id="level">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>Speed Typer</h2>
+      <div class="timer">
+        <span id="time">Time left 10</span>
+        <span id="score">Score 0</span>
+      </div>
+
+      <div class="text-container">
+        <small>Try to type following:</small>
+        <h1 id="word">Juice</h1>
+      </div>
+      <input
+        type="text"
+        id="text"
+        autocomplete="off"
+        placeholder="Type the word here..."
+      />
+    </div>
+
+    <button class="setting-btn"><i class="fas fa-cog"></i></button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
