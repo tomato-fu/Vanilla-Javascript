@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,500,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to right bottom,
+    #d2f3d7,
+    #b7eed8,
+    #9be8dd,
+    #7fe0e7,
+    #69d7f2
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+}
+
+.title {
+  display: flex;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.add-button-container button {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.add-button-container button i {
+  margin-right: 5px;
+}
+
+.card-container {
+  margin-top: 50px;
+  perspective: 1000px;
+  height: 300px;
+  width: 500px;
+  max-width: 100%;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(50%) rotateY(-10deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card.active {
+  z-index: 10;
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
+}
+
+.inner-card {
+  border-radius: 4px;
+  box-shadow: 0 1px 10px rgb(0 0 0 / 30%);
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.inner-card.show {
+  transform: rotateX(180deg);
+}
+
+.inner-card-front,
+.inner-card-back {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+
+.inner-card-front {
+  z-index: 2;
+  transform: rotateX(0deg);
+}
+
+.inner-card-back {
+  transform: rotateX(180deg);
+}
+
+.add-container {
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  z-index: -1;
+}
+
+.add-container.show {
+  opacity: 1;
+  z-index: 2;
+}
+#add-form {
+  max-width: 80%;
+  width: 500px;
+}
+#add-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#add-form textarea {
+  margin-bottom: 12px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+
+  height: 100px;
+}
+
+#add-form section:last-of-type {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.add-btn {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.add-btn i {
+  margin-right: 5px;
+}
+
+.add-container h1 {
+  position: relative;
+}
+
+#quit-btn {
+  margin-left: 50px;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 20px;
+  top: 20%;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navigation button {
+  border: 0;
+  padding: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navigation p {
+  margin: 0 20px;
+}
+
+.clear-btn {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-top: 100px;
+  border: 0;
+  background-color: #c0392b;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.delete-btn i {
+  margin-right: 5px;
+}
+
+.delete-btn.hidden {
+  display: none;
+}
